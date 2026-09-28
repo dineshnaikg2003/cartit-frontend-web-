@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0d631b;
+    --primary-dark: #074712;
+    --primary-container: #2e7d32;
+    --primary-light: #e6f4e8;
+    --surface: #f7fbf0;
+    --surface-container: #ebefe5;
+    --on-surface: #181d17;
+    --on-surface-variant: #40493d;
+    --accent-gold: #f59e0b;
+    --accent-orange: #ea580c;
+  }
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f7fbf0;
+  color: #181d17;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d631b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #074712;
+}
+
+/* Glassmorphism Header */
+.glass-header {
+  background: rgba(247, 251, 240, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 228, 218, 0.7);
+}
+
+/* Diffused Elevation Shadows from DESIGN.md */
+.shadow-ambient {
+  box-shadow: 0 10px 30px -5px rgba(13, 99, 27, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-ambient-lg {
+  box-shadow: 0 20px 40px -10px rgba(13, 99, 27, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* Micro animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
